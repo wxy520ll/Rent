@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TimelineView">
+        <attr name="marker" format="color|reference"/>
+        <attr name="line" format="color|reference"/>
+        <attr name="marker_size" format="dimension"/>
+        <attr name="line_size" format="dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="CounterView">
+        <attr name="prefix" format="string" />
+        <attr name="suffix" format="string" />
+        <attr name="timeInterval" format="float" />
+        <attr name="incrementValue" format="float" />
+        <attr name="startValue" format="float" />
+        <attr name="endValue" format="float" />
+        <attr name="formatText" format="boolean" />
+        <attr name="autoStart" format="boolean" />
+        <attr name="type" format="enum">
+            <enum name="integer" value="0" />
+            <enum name="decimal" value="1" />
+            <enum name="both" value="2" />
+        </attr>
+        <attr name="android:text" />
+    </declare-styleable>
+
+    <!-- 数字进度条 -->
+    <declare-styleable name="NumberProgressBar">
+        <attr name="progress" format="integer" />
+        <attr name="max" format="integer" />
+        <attr name="progress_unreached_color" format="color" />
+        <attr name="progress_reached_color" format="color" />
+        <attr name="progress_reached_bar_height" format="dimension" />
+        <attr name="progress_unreached_bar_height" format="dimension" />
+        <attr name="progress_text_size" format="dimension" />
+        <attr name="progress_text_color" format="color" />
+        <attr name="progress_text_offset" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="Themes">
+        <attr name="numberProgressBarStyle" format="reference" />
+    </declare-styleable>
+
+
+    <!-- 圆形控件 -->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+
+    <!-- 首页圆形 -->
+    <declare-styleable name="CircleProgress">
+        <attr name="viewType" format="integer" />
+        <attr name="circle_base_color" format="color" />
+        <attr name="circle_progress_color" format="color" />
+        <attr name="circle_max" format="float" />
+    </declare-styleable>
+
+
+    <!-- 底部圆形按钮 -->
+    <declare-styleable name="CircleTabBottomView">
+        <attr name="bottomview_color" format="reference" />
+        <attr name="bottomview_line_with" format="integer" />
+    </declare-styleable>
+
+
+    <!-- 下拉 上拉 -->
+    <declare-styleable name="PullToRefresh">
+        <attr name="adapterViewBackground" format="reference|color" />
+        <attr name="headerBackground" format="reference|color" />
+        <attr name="headerTextColor" format="color" />
+        <attr name="mode">
+            <flag name="pullDownFromTop" value="0x1" />
+            <flag name="pullUpFromBottom" value="0x2" />
+            <flag name="both" value="0x3" />
+        </attr>
+    </declare-styleable>
+
+    <!-- 加载中进度条 -->
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color" />
+        <attr name="roundProgressColor" format="color" />
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="r_max" format="integer"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+    <!-- 箭头 -->
+    <declare-styleable name="Arrows">
+        <attr name="tybe" format="integer"></attr>
+    </declare-styleable>
+
+
+
+</resources>

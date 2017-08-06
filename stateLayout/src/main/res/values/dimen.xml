@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="layout_margin">8dp</dimen>
+
+    <dimen name="text_tip">15sp</dimen>
+
+    <dimen name="retry_tip">13sp</dimen>
+    <dimen name="image_width">55dp</dimen>
+
+    <dimen name="layout_marginTop">80dp</dimen>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <com.xinyi_tech.commonlibs.widget.view.RoundProgressBar
+        android:id="@+id/animProgress"
+        android:layout_width="@dimen/space_100"
+        android:layout_height="@dimen/space_100"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        android_custom:roundColor="@color/background"
+        android_custom:roundProgressColor="@color/red"
+        android_custom:roundWidth="3dp"
+        android_custom:textColor="@color/half_trans_black"
+        android_custom:textIsDisplayable="false"
+        android_custom:textSize="@dimen/text_size_16" />
+
+    <TextView
+        android:id="@+id/tips_loading_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/animProgress"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:text="@string/loadding"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_size_16" />
+
+</RelativeLayout>

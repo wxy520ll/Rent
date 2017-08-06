@@ -1,0 +1,21 @@
+<resources>
+    <style name="AppStartStyle" parent="android:Theme.Translucent.NoTitleBar"></style>
+
+
+    <style name="dialogstyle" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="@android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <style name="my_dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <style name="rightStyle" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/in_right</item>
+        <item name="@android:windowExitAnimation">@anim/out_right</item>
+    </style>
+
+</resources>

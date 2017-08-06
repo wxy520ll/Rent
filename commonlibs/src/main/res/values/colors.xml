@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="deliver">#cdcdcd</color>
+    <color name="background">#f0f0f0</color>
+    <color name="white">#ffffff</color>
+
+    <color name="important_text">#333333</color>
+    <color name="normal_text">#656565</color>
+    <color name="aux_text">#848484</color>
+    <color name="unfocus_text">#929292</color>
+    <color name="focus_text">#ffda44</color>
+    <color name="red">#ff0000</color>
+    <color name="drak_bg">#5c5c5c</color>
+    <color name="transparent">#00000000</color>
+    <color name="half_trans_black" >#aa000000</color>
+    <color name="blue">#428bcb</color>
+    <color name="warn_color" >#F2572D</color>
+    <color name="green">#359a2b</color>
+    <color name="trouble_status_nor">#008972</color>
+    <color name="focus_press">#B38F00</color>
+    <color name="bt_save_color">#20a0ff</color>
+    <color name="gray">#edebeb</color>
+    <color name="line_blue">#398CFF</color>
+</resources>
