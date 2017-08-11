@@ -1,1 +1,1 @@
-include ':app', ':stateLayout', ':recycleViewAdapter', ':commonlibs'
+include ':app', ':stateLayout', ':commonlibs'

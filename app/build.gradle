@@ -9,6 +9,7 @@ android {
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+        multiDexEnabled rootProject.ext.android.multiDexEnabled
     }
     buildTypes {
         release {
@@ -25,17 +26,25 @@ dependencies {
     })
     testCompile 'junit:junit:4.12'
     compile project(':stateLayout')
-    compile project(':recycleViewAdapter')
     compile project(':commonlibs')
-
     //base
     compile rootProject.ext.dependencies["appcompat-v7"]
-
-
+    compile rootProject.ext.dependencies["multidex"]
     //tools
     compile rootProject.ext.dependencies["blockcanary-android"]
     compile rootProject.ext.dependencies["blockcanary-no-op"]
     compile rootProject.ext.dependencies["leakcanary-android"]
     compile rootProject.ext.dependencies["leakcanary-android-no-op"]
+    //okhttp
+    compile rootProject.ext.dependencies["okgo"]
+    compile rootProject.ext.dependencies["okrx"]
+    compile rootProject.ext.dependencies["rxandroid"]
+    //dagger2
+    compile rootProject.ext.dependencies["dagger"]
+    compile rootProject.ext.dependencies["dagger-compiler"]
+    compile rootProject.ext.dependencies["butterknife"]
+    compile rootProject.ext.dependencies["annotation"]
 
+    //others
+    compile rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
 }

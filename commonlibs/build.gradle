@@ -26,11 +26,6 @@ dependencies {
     compile rootProject.ext.dependencies["appcompat-v7"]
     compile rootProject.ext.dependencies["support-v4"]
 
-    //rxjava
-    compile rootProject.ext.dependencies["rxlifecycle"]
-    compile rootProject.ext.dependencies["rxlifecycle-components"]
-
-
     //ui
     compile rootProject.ext.dependencies["recyclerview-v7"]
 

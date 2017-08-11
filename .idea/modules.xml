@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/Architecture.iml" filepath="$PROJECT_DIR$/Architecture.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/commonlibs/commonlibs.iml" filepath="$PROJECT_DIR$/commonlibs/commonlibs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/recycleViewAdapter/recycleViewAdapter.iml" filepath="$PROJECT_DIR$/recycleViewAdapter/recycleViewAdapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/stateLayout/stateLayout.iml" filepath="$PROJECT_DIR$/stateLayout/stateLayout.iml" />
     </modules>
   </component>

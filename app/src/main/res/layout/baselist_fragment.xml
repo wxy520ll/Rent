@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/titleBar"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_left"
+            android:text="取消"
+            android:visibility="gone"
+            android:layout_gravity="left|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_17"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/title"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_18"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/uploadmanager"
+            android:textSize="@dimen/space_17"
+            android:text="上传管理"
+            android:clickable="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_below="@id/titleBar"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/addtop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/p1"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/taken_fire_bt_height">
+        <Button
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/white"
+            android:text="上传"
+            android:background="@color/button_save_color"
+            android:layout_height="@dimen/taken_fire_bt_height" />
+        <Button
+            android:id="@+id/tv_delete"
+            android:text="删除"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/white"
+            android:background="@color/plate_save_color"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <com.fingdo.statelayout.StateLayout
+        android:layout_above="@id/p1"
+        android:layout_below="@id/addtop"
+        xmlns:sl="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/state_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        sl:emptyImg="@drawable/ic_state_empty"
+        sl:emptyText="没有数据"
+        sl:errorImg="@drawable/ic_state_error"
+        sl:errorText="请求错误"
+        sl:loadingText="正在加载..."
+        sl:loginImg="@drawable/ic_state_login"
+        sl:loginText="Sign in"
+        sl:noNetworkImg="@drawable/ic_state_no_network"
+        sl:noNetworkText="没有网络"
+        sl:timeOutImg="@drawable/ic_state_time_out"
+        sl:timeOutText="请求超时">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/m_swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/m_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </com.fingdo.statelayout.StateLayout>
+</RelativeLayout>
