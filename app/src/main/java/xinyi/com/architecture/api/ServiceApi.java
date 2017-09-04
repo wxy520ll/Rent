@@ -24,7 +24,7 @@ public class ServiceApi{
 	 * @param <T>
 	 * @return
 	 */
-	public static <T> Observable<T> getData(String jsonParams, String url, Class<T>tClass, Context context) {
+	public  <T> Observable<T> getData(String jsonParams, String url, Class<T>tClass, Context context) {
 		return RxUtil.request(jsonParams,url,tClass,context);
 	}
 }

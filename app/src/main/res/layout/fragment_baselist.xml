@@ -52,7 +52,7 @@
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/taken_fire_bt_height">
+        android:layout_height="wrap_content">
         <Button
             android:id="@+id/save"
             android:layout_width="0dp"
@@ -60,14 +60,15 @@
             android:textSize="@dimen/text_size_16"
             android:textColor="@color/white"
             android:text="上传"
-            android:background="@color/button_save_color"
-            android:layout_height="@dimen/taken_fire_bt_height" />
+            android:layout_height="match_parent"
+
+         />
         <Button
             android:id="@+id/tv_delete"
             android:text="删除"
             android:textSize="@dimen/text_size_16"
             android:textColor="@color/white"
-            android:background="@color/plate_save_color"
+
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent" />
