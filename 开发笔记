@@ -1,0 +1,10 @@
+1.只要是能被调用一次的，尽量的封装起来
+
+2.在网络请求的时候。在回调方法中要去，判断当前activity是否存活
+
+3.在ondesroy 中，解除各绑定
+
+4.Application 不准在保存信息了。变量的保存 单独用一个类来管理。
+然后通过Dagger2 注入
+
+5.layout 全部以activity_login  activity_splash命名

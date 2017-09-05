@@ -4,7 +4,7 @@ package xinyi.com.architecture.base;
  * Created by wxy on 2017/8/11.
  */
 
-public interface IBaseView {
+public interface  IBaseView  {
 
 	public void showLoadingDialog();
 

@@ -4,6 +4,7 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import xinyi.com.architecture.api.ServiceManager;
 import xinyi.com.architecture.application.XinYiApplication;
 
 /**
@@ -21,5 +22,11 @@ public class AppModule {
 	@Singleton
 	public XinYiApplication provideApplicationContext() {
 		return application;
+	}
+
+	@Provides
+	@Singleton
+	public ServiceManager provideServiceManager(ServiceManager serviceManager) {
+		return serviceManager;
 	}
 }

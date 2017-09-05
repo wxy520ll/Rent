@@ -21,18 +21,13 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile project(':stateLayout')
-
     //Base
     compile rootProject.ext.dependencies["appcompat-v7"]
     compile rootProject.ext.dependencies["support-v4"]
-
     //ui
     compile rootProject.ext.dependencies["recyclerview-v7"]
-
     //apt
     compile rootProject.ext.dependencies["butterknife"]
-
-
     compile rootProject.ext.dependencies["fastjson"]
     compile rootProject.ext.dependencies["gson"]
 }

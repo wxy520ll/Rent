@@ -1,5 +1,7 @@
 package xinyi.com.architecture.di.component;
 
+import android.app.Application;
+
 import javax.inject.Singleton;
 
 import dagger.Component;
@@ -10,10 +12,10 @@ import xinyi.com.architecture.di.module.AppModule;
  * Created by wxy on 2017/9/4.
  */
 @Singleton
-@Component(dependencies = AppModule.class)
+@Component(modules = AppModule.class)
 public interface AppComponent {
 
 	XinYiApplication getApplication();
 
-	void Inject(XinYiApplication xinYiApplication);
+	void inject(Application application);
 }

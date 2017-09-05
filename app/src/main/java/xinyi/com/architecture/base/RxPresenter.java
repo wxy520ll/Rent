@@ -7,11 +7,22 @@ import io.reactivex.disposables.Disposable;
  * Created by codeest on 2016/8/2.
  * 基于Rx的Presenter封装,控制订阅的生命周期
  */
-public class RxPresenter<T extends IBaseView> implements BasePresenter<T> {
+public class RxPresenter<T extends IBaseView>implements BasePresenter<T>{
 
-	protected T mView;
 	protected CompositeDisposable mCompositeDisposable;
+	protected T mView;
+	@Override
+	public void attachView(T view) {
+		this.mView=view;
+	}
 
+	@Override
+	public void detachView() {
+		this.mView = null;
+		if (mCompositeDisposable != null) {
+			mCompositeDisposable.clear();
+		}
+	}
 
 	protected void addSubscribe(Disposable subscription) {
 		if (mCompositeDisposable == null) {
@@ -20,21 +31,4 @@ public class RxPresenter<T extends IBaseView> implements BasePresenter<T> {
 		mCompositeDisposable.add(subscription);
 	}
 
-
-	@Override
-	public void attachView(T view) {
-		this.mView = view;
-	}
-
-	@Override
-	public void detachView() {
-		this.mView = null;
-		unSubscribe();
-	}
-
-	protected void unSubscribe() {
-		if (mCompositeDisposable != null) {
-			mCompositeDisposable.clear();
-		}
-	}
 }

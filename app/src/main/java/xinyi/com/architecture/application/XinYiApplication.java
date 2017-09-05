@@ -11,9 +11,8 @@ import com.lzy.okgo.cache.CacheEntity;
 import com.lzy.okgo.cache.CacheMode;
 import com.squareup.leakcanary.LeakCanary;
 
-import javax.inject.Inject;
-
 import okhttp3.OkHttpClient;
+import xinyi.com.architecture.di.component.AppComponent;
 import xinyi.com.architecture.di.component.DaggerAppComponent;
 import xinyi.com.architecture.di.module.AppModule;
 
@@ -23,8 +22,8 @@ import xinyi.com.architecture.di.module.AppModule;
 
 public class XinYiApplication extends Application {
 
-	@Inject
-	public static XinYiApplication xinYiApplication;
+	public  static XinYiApplication xinYiApplication;
+	public static AppComponent appComponent;
 
 	@Override
 	protected void attachBaseContext(Context base) {
@@ -35,20 +34,21 @@ public class XinYiApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
+		xinYiApplication=this;
 		initOkgo();
 
-		inject();
-		//初始化内存泄漏检测
 		LeakCanary.install(this);
-		//初始化卡顿工具检测
-		BlockCanary.install(getApplicationContext(), new BlockCanaryContext()).start();
+		BlockCanary.install(xinYiApplication, new BlockCanaryContext()).start();
 	}
 
-	private void inject() {
-		DaggerAppComponent.builder()
-				.appModule(new AppModule(this))
-				.build()
-				.Inject(this);
+	public AppComponent getAppComponent() {
+		if (appComponent==null) {
+			appComponent = DaggerAppComponent.builder()
+					.appModule(new AppModule(this))
+					.build();
+
+		}
+		return appComponent;
 	}
 
 	/**

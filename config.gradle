@@ -3,7 +3,7 @@ ext {
     android = [
             compileSdkVersion: 25,
             buildToolsVersion: '25.0.2',
-            applicationId    : "xinyi.com.architecture",
+            applicationId    : "xinyi.com.rent",
             minSdkVersion    : 19,
             targetSdkVersion : 25,
             versionCode      : 130,
@@ -14,7 +14,7 @@ ext {
     def dependVersion = [
             support    : "25.1.0",
             okhttp     : "3.6.0",
-            dagger2    : "2.0.2",
+            dagger2    : "2.5",
             butterknife: "7.0.1",
             blockcanary: "1.2.1",
             leakcanary : "1.4-beta2"
