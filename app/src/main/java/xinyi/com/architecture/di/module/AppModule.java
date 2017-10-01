@@ -14,8 +14,9 @@ import xinyi.com.architecture.application.XinYiApplication;
 public class AppModule {
 
 	private XinYiApplication application;
-	public AppModule(XinYiApplication xinYiApplication){
-		this.application=xinYiApplication;
+
+	public AppModule(XinYiApplication xinYiApplication) {
+		this.application = xinYiApplication;
 	}
 
 	@Provides
@@ -24,9 +25,12 @@ public class AppModule {
 		return application;
 	}
 
+
 	@Provides
 	@Singleton
-	public ServiceManager provideServiceManager(ServiceManager serviceManager) {
-		return serviceManager;
+	public ServiceManager provideServiceManager(XinYiApplication xinYiApplication) {
+		return new ServiceManager(xinYiApplication);
 	}
+
 }
+

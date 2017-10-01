@@ -16,13 +16,14 @@
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SplashAty" android:theme="@style/SplashTheme">
+        <activity android:name=".activity.main.SplashAty" android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.WelComeAty"/>
+        <activity android:name=".activity.main.WelComeAty"/>
+        <activity android:name=".activity.main.MainAty" android:theme="@style/mainTheme"/>
     </application>
 
 </manifest>

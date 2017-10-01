@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            app:contentScrim="@color/colorPrimaryDark"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:layout_height="match_parent">
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                app:contentInsetStart="0dp"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+               <include layout="@layout/layout_top"/>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <com.fingdo.statelayout.StateLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        xmlns:sl="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/state_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        sl:emptyImg="@drawable/ic_state_empty"
+        sl:emptyText="没有数据"
+        sl:errorImg="@drawable/ic_state_error"
+        sl:errorText="请求错误"
+        sl:loadingText="正在加载..."
+        sl:loginImg="@drawable/ic_state_login"
+        sl:loginText="Sign in"
+        sl:noNetworkImg="@drawable/ic_state_no_network"
+        sl:noNetworkText="没有网络"
+        sl:timeOutImg="@drawable/ic_state_time_out"
+        sl:timeOutText="请求超时">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/m_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.fingdo.statelayout.StateLayout>
+</android.support.design.widget.CoordinatorLayout>

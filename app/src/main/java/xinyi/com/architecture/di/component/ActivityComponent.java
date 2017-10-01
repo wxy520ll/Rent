@@ -1,7 +1,7 @@
 package xinyi.com.architecture.di.component;
 
 import dagger.Component;
-import xinyi.com.architecture.activity.SplashAty;
+import xinyi.com.architecture.activity.main.SplashAty;
 import xinyi.com.architecture.base.BaseMvpActivity;
 import xinyi.com.architecture.di.module.ActivityModule;
 import xinyi.com.architecture.di.scope.ActivityScope;

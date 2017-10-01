@@ -5,6 +5,7 @@ import android.app.Application;
 import javax.inject.Singleton;
 
 import dagger.Component;
+import xinyi.com.architecture.api.ServiceManager;
 import xinyi.com.architecture.application.XinYiApplication;
 import xinyi.com.architecture.di.module.AppModule;
 
@@ -16,6 +17,8 @@ import xinyi.com.architecture.di.module.AppModule;
 public interface AppComponent {
 
 	XinYiApplication getApplication();
+
+	ServiceManager getServiceManager();//api请求对象
 
 	void inject(Application application);
 }
